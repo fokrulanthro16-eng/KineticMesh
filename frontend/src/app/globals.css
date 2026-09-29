@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07090e;
+  --foreground: #e2e8f0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  overflow-x: hidden;
+}
+
+/* Obsidian Glassmorphism Panels */
+.obsidian-card {
+  background: rgba(13, 17, 27, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.55), inset 0 0 12px 0 rgba(56, 189, 248, 0.04);
+}
+
+.obsidian-card-danger {
+  background: rgba(26, 11, 15, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(239, 68, 68, 0.15), inset 0 0 16px 0 rgba(239, 68, 68, 0.08);
+}
+
+.obsidian-card-warning {
+  background: rgba(28, 20, 10, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(245, 158, 11, 0.15), inset 0 0 16px 0 rgba(245, 158, 11, 0.08);
+}
+
+/* Tactical scanline backdrop */
+.scanline-bg {
+  background-image: linear-gradient(
+    rgba(18, 26, 43, 0) 50%,
+    rgba(0, 0, 0, 0.3) 50%
+  ),
+  linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.015),
+    rgba(0, 255, 0, 0.005),
+    rgba(0, 0, 255, 0.015)
+  );
+  background-size: 100% 3px, 6px 100%;
+}
+
+/* Glowing text helpers */
+.glow-emerald {
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+}
+
+.glow-crimson {
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+}
+
+.glow-amber {
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.7);
+}
+
+/* Pulse animation */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar-sweep {
+  animation: radar-sweep 4s linear infinite;
+  transform-origin: center center;
+}
+
+/* Custom scrollbars for logs */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 15, 26, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.25);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.5);
+}
