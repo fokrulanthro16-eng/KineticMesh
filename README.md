@@ -20,6 +20,8 @@
 
 *Protecting autonomous unmanned aerial vehicle (UAV) swarms operating in contested, GPS-denied, and actively spoofed electronic warfare airspaces.*
 
+`uav-swarm` • `anti-spoofing` • `zero-trust` • `byzantine-fault-tolerance` • `mavlink` • `px4` • `defense-tech` • `cybersecurity`
+
 <p align="center">
   <img src="./assets/cockpit_hud.png" alt="KineticMesh Tactical Avionics HUD" width="100%" style="border-radius: 8px; border: 1px solid #1e293b;" />
 </p>
