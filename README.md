@@ -4,6 +4,7 @@
 ### Decentralized Zero-Trust Kinematic Swarm Consensus & Anti-Spoofing Mesh
 
 [![Build Status](https://img.shields.io/badge/CI%2FCD-Passing-brightgreen?style=for-the-badge&logo=githubactions)](https://github.com/fokrulanthro16-eng/KineticMesh)
+[![Vercel Live](https://img.shields.io/badge/Vercel-Production%20Live-brightgreen?style=for-the-badge&logo=vercel)](https://frontend-alpha-pied-13.vercel.app)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15.0-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![React 19](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -16,6 +17,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 **Track:** Cybersecurity + Dual-Use Technology (Aviation Futures Challenge)  
+**Live Interactive Web HUD:** [https://frontend-alpha-pied-13.vercel.app](https://frontend-alpha-pied-13.vercel.app) *(Standalone Autonomous Avionics Simulator)*  
+**Demo Video (3-Min Full Voiceover):** [`assets/kineticmesh_demo_3min.mp4`](assets/kineticmesh_demo_3min.mp4)  
 **Primary Repository:** [https://github.com/fokrulanthro16-eng/KineticMesh.git](https://github.com/fokrulanthro16-eng/KineticMesh.git)
 
 *Protecting autonomous unmanned aerial vehicle (UAV) swarms operating in contested, GPS-denied, and actively spoofed electronic warfare airspaces.*
@@ -28,7 +31,7 @@
 
 ---
 
-[Key Capabilities](#1-executive-summary) • [Tactical Gallery](#tactical-cockpit-gallery) • [Architecture](#2-system-architecture) • [Math Formulations](#3-mathematical-consensus-formulations) • [Quickstart](#4-quickstart--deployment) • [Attacks](#5-adversarial-attack-vectors--reactive-defense) • [Verification](#6-automated-verification-test-suite) • [Demo Script](DEMO_VOICEOVER_SCRIPT.md)
+[Key Capabilities](#1-executive-summary) • [Live Demo](https://frontend-alpha-pied-13.vercel.app) • [Demo Video](assets/kineticmesh_demo_3min.mp4) • [Tactical Gallery](#tactical-cockpit-gallery) • [Architecture](#2-system-architecture) • [Math Formulations](#3-mathematical-consensus-formulations) • [Quickstart](#4-quickstart--deployment) • [Attacks](#5-adversarial-attack-vectors--reactive-defense) • [Verification](#6-automated-verification-test-suite) • [Demo Script](DEMO_VOICEOVER_SCRIPT.md)
 
 </div>
 
@@ -147,27 +150,27 @@ Comprehensive visual telemetry suite showcasing nominal flight, real-time electr
 
 <p align="center">
   <b>01. Nominal Swarm Consensus (DEFCON 4 — Pristine V-Formation Active)</b><br/>
-  <img src="./assets/01_pristine_flight_radar.png" alt="Pristine Flight Radar" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
+  <img src="./assets/01_v_formation_radar.png" alt="Pristine V-Formation Radar HUD" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
 </p>
 
 <p align="center">
   <b>02. Active GPS Drift Attack & Dead-Reckoning Multilateration Recovery (DEFCON 2)</b><br/>
-  <img src="./assets/02_gps_drift_attack_quarantine.png" alt="GPS Drift Attack Quarantine" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
+  <img src="./assets/02_gps_drift_quarantine.png" alt="GPS Drift Attack Quarantine" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
 </p>
 
 <p align="center">
   <b>03. Rogue Ghost Aircraft Injection Isolated via Physical UWB ToF Gating (DEFCON 3)</b><br/>
-  <img src="./assets/03_ghost_injection_rejection.png" alt="Ghost Aircraft Injection Rejection" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
+  <img src="./assets/03_ghost_injection_alert.png" alt="Ghost Aircraft Injection Rejection" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
 </p>
 
 <p align="center">
   <b>04. Immutable SHA-256 Byzantine Consensus Audit Ledger (FAA Part 107 / EASA SORA)</b><br/>
-  <img src="./assets/04_cryptographic_audit_ledger.png" alt="Cryptographic Audit Ledger" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
+  <img src="./assets/04_merkle_threat_ledger.png" alt="Cryptographic Threat Ledger" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
 </p>
 
 <p align="center">
-  <b>05. Operational Hardening & Electronic Warfare Resilience Panel</b><br/>
-  <img src="./assets/05_system_hardening_panel.png" alt="System Hardening Panel" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
+  <b>05. Operational Hardening & Electronic Warfare Resilience Panel (NLOS / KNN / Inertial Fallback)</b><br/>
+  <img src="./assets/05_system_hardening_nlos.png" alt="System Hardening Panel" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
 </p>
 
 ---
