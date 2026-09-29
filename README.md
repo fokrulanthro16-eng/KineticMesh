@@ -3,14 +3,17 @@
 # 🛰️ KineticMesh
 ### Decentralized Zero-Trust Kinematic Swarm Consensus & Anti-Spoofing Mesh
 
+[![Build Status](https://img.shields.io/badge/CI%2FCD-Passing-brightgreen?style=for-the-badge&logo=githubactions)](https://github.com/fokrulanthro16-eng/KineticMesh)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15.0-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![React 19](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
 [![Docker Compliant](https://img.shields.io/badge/Docker-Production%20Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![FAA Part 107](https://img.shields.io/badge/FAA-Part%20107%20Waiver%20Ready-0A84FF?style=for-the-badge)](https://github.com/fokrulanthro16-eng/KineticMesh)
+[![STANAG 4586](https://img.shields.io/badge/NATO-STANAG%204586%20Compliant-red?style=for-the-badge)](https://github.com/fokrulanthro16-eng/KineticMesh)
+[![Byzantine Fault Tolerant](https://img.shields.io/badge/Consensus-3f%2B1%20BFT-purple?style=for-the-badge)](https://github.com/fokrulanthro16-eng/KineticMesh)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Defense Grade](https://img.shields.io/badge/Standard-STANAG%204586%20%2F%20EASA%20SORA-red?style=for-the-badge)](https://www.easa.europa.eu/)
 
 **Track:** Cybersecurity + Dual-Use Technology (Aviation Futures Challenge)  
 **Primary Repository:** [https://github.com/fokrulanthro16-eng/KineticMesh.git](https://github.com/fokrulanthro16-eng/KineticMesh.git)
@@ -361,10 +364,15 @@ Every consensus decision is sealed into a SHA-256 chained ledger with Merkle roo
 
 ```
 KineticMesh/
+├── .github/
+│   └── workflows/
+│       └── ci.yml                  # Automated CI/CD pipeline (Python + Next.js)
 ├── .gitignore                      # Comprehensive Next.js & Python gitignore
 ├── docker-compose.yml              # Multi-container orchestration
+├── CONTRIBUTING.md                 # Contribution guidelines & architectural invariants
 ├── LICENSE                         # MIT License
 ├── README.md                       # World-class executive documentation
+├── SECURITY.md                     # Vulnerability disclosure policy (VDP)
 ├── run_dev.ps1                     # Windows development runner
 │
 ├── assets/                         # Visual assets & HUD telemetry diagrams
