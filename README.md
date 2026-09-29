@@ -28,7 +28,7 @@
 
 ---
 
-[Key Capabilities](#1-executive-summary) • [System Architecture](#2-system-architecture) • [Mathematical Formulations](#3-mathematical-consensus-formulations) • [Quickstart](#4-quickstart--deployment) • [Attack Scenarios](#5-adversarial-attack-vectors--reactive-defense) • [Verification Proofs](#6-automated-verification-test-suite) • [Hardware SITL](#7-hardware--mavlink-sitl-integration) • [Compliance](#8-aerospace-compliance--cryptographic-attestation)
+[Key Capabilities](#1-executive-summary) • [Tactical Gallery](#tactical-cockpit-gallery) • [Architecture](#2-system-architecture) • [Math Formulations](#3-mathematical-consensus-formulations) • [Quickstart](#4-quickstart--deployment) • [Attacks](#5-adversarial-attack-vectors--reactive-defense) • [Verification](#6-automated-verification-test-suite) • [Demo Script](DEMO_VOICEOVER_SCRIPT.md)
 
 </div>
 
@@ -141,6 +141,37 @@ flowchart TD
 
 ---
 
+## Tactical Cockpit Gallery
+
+Comprehensive visual telemetry suite showcasing nominal flight, real-time electronic warfare intrusions, and autonomous recovery:
+
+<p align="center">
+  <b>01. Nominal Swarm Consensus (DEFCON 4 — Pristine V-Formation Active)</b><br/>
+  <img src="./assets/01_pristine_flight_radar.png" alt="Pristine Flight Radar" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
+</p>
+
+<p align="center">
+  <b>02. Active GPS Drift Attack & Dead-Reckoning Multilateration Recovery (DEFCON 2)</b><br/>
+  <img src="./assets/02_gps_drift_attack_quarantine.png" alt="GPS Drift Attack Quarantine" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
+</p>
+
+<p align="center">
+  <b>03. Rogue Ghost Aircraft Injection Isolated via Physical UWB ToF Gating (DEFCON 3)</b><br/>
+  <img src="./assets/03_ghost_injection_rejection.png" alt="Ghost Aircraft Injection Rejection" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
+</p>
+
+<p align="center">
+  <b>04. Immutable SHA-256 Byzantine Consensus Audit Ledger (FAA Part 107 / EASA SORA)</b><br/>
+  <img src="./assets/04_cryptographic_audit_ledger.png" alt="Cryptographic Audit Ledger" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
+</p>
+
+<p align="center">
+  <b>05. Operational Hardening & Electronic Warfare Resilience Panel</b><br/>
+  <img src="./assets/05_system_hardening_panel.png" alt="System Hardening Panel" width="100%" style="border-radius: 8px; border: 1px solid #1e293b; margin-top: 8px; margin-bottom: 24px;" />
+</p>
+
+---
+
 ## 3. Mathematical Consensus Formulations
 
 ### 3.1 Pairwise & Spatial Residual Consensus
@@ -227,6 +258,20 @@ npm run dev
 ```
 
 Open `http://localhost:3000` in any modern browser (Chrome, Edge, Firefox, Brave).
+
+---
+
+### Option C: 1-Click Cloud Deployment (Vercel)
+
+Deploy the interactive tactical avionics cockpit to Vercel with zero configuration. Includes autonomous client-side simulation fallback so the live web demo operates seamlessly even without a local backend connected:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ffokrulanthro16-eng%2FKineticMesh)
+
+Or deploy via Vercel CLI from your terminal:
+```bash
+# From project root
+npx vercel --prod
+```
 
 ---
 
@@ -371,14 +416,21 @@ KineticMesh/
 │       └── ci.yml                  # Automated CI/CD pipeline (Python + Next.js)
 ├── .gitignore                      # Comprehensive Next.js & Python gitignore
 ├── docker-compose.yml              # Multi-container orchestration
+├── vercel.json                     # Vercel production deployment routing
 ├── CONTRIBUTING.md                 # Contribution guidelines & architectural invariants
+├── DEMO_VOICEOVER_SCRIPT.md        # Official 3-minute video voiceover script
 ├── LICENSE                         # MIT License
 ├── README.md                       # World-class executive documentation
 ├── SECURITY.md                     # Vulnerability disclosure policy (VDP)
 ├── run_dev.ps1                     # Windows development runner
 │
 ├── assets/                         # Visual assets & HUD telemetry diagrams
-│   └── cockpit_hud.png             # Tactical avionics HUD capture
+│   ├── cockpit_hud.png             # Hero tactical avionics HUD capture
+│   ├── 01_pristine_flight_radar.png # Gallery: Nominal V-formation consensus
+│   ├── 02_gps_drift_attack_quarantine.png # Gallery: 325m GPS drift & failover
+│   ├── 03_ghost_injection_rejection.png # Gallery: Phantom aircraft ToF isolation
+│   ├── 04_cryptographic_audit_ledger.png # Gallery: SHA-256 Merkle chain
+│   └── 05_system_hardening_panel.png # Gallery: EW resilience matrix
 │
 ├── backend/                        # FastAPI Consensus Engine
 │   ├── Dockerfile                  # Container specification (Python 3.12)
@@ -411,6 +463,7 @@ KineticMesh/
         │   └── TelemetryHUD.tsx    # Kinematic flight instrumentation
         ├── lib/                    # Procedural audio & synthetic speech
         │   ├── audio.ts            # Web Audio API defense sound synthesizer
+        │   ├── mockEngine.ts       # Standalone client-side simulation engine (Vercel)
         │   └── voice.ts            # Web Speech API tactical annunciator
         └── types/                  # Strict TypeScript interfaces
             └── telemetry.ts        # Telemetry, block & packet definitions

@@ -11,6 +11,7 @@ import { NodeDetailModal } from "@/components/NodeDetailModal";
 import { SystemHardeningPanel } from "@/components/SystemHardeningPanel";
 import { tacticalAudio } from "@/lib/audio";
 import { tacticalVoice } from "@/lib/voice";
+import { mockSwarmEngine } from "@/lib/mockEngine";
 
 // Dual-stack host resolver for Windows (avoids IPv6 ::1 vs IPv4 127.0.0.1 mismatch)
 const getEndpoints = () => {
@@ -69,8 +70,16 @@ export default function KineticMeshCockpit() {
             setTelemetry(data2);
             activeApiUrlRef.current = endpoints.fallbackApi;
             setIsConnected(true);
+            return;
           }
         } catch {}
+
+        // Autonomous Client-Side Simulation fallback for Vercel/Static Demo
+        if (isMounted) {
+          const initialMock = mockSwarmEngine.step(1.0);
+          setTelemetry(initialMock);
+          setIsConnected(true);
+        }
       }
     };
 
@@ -142,8 +151,14 @@ export default function KineticMeshCockpit() {
             const data: SwarmTelemetry = await res.json();
             setTelemetry(data);
             setIsConnected(true);
+            return;
           }
         } catch {}
+
+        // Step autonomous mock simulation if backend is offline
+        const mockData = mockSwarmEngine.step(1.0);
+        setTelemetry(mockData);
+        setIsConnected(true);
       }
     }, 1000);
 
@@ -184,7 +199,10 @@ export default function KineticMeshCockpit() {
         setTelemetry(data);
       }
     } catch (err) {
-      console.error("Attack trigger error:", err);
+      // Offline fallback: execute locally in client-side mock engine
+      mockSwarmEngine.triggerAttack(attackType, active, targetNode);
+      const localData = mockSwarmEngine.step(0.0);
+      setTelemetry({ ...localData });
     } finally {
       setIsLoading(false);
     }
@@ -209,7 +227,9 @@ export default function KineticMeshCockpit() {
         setTelemetry(data);
       }
     } catch (err) {
-      console.error("Emergency mode error:", err);
+      mockSwarmEngine.emergencyMode = mode;
+      const localData = mockSwarmEngine.step(0.0);
+      setTelemetry({ ...localData });
     } finally {
       setIsLoading(false);
     }
@@ -234,7 +254,9 @@ export default function KineticMeshCockpit() {
         }
       }
     } catch (err) {
-      console.error("Source toggle error:", err);
+      mockSwarmEngine.telemetrySource = source;
+      const localData = mockSwarmEngine.step(0.0);
+      setTelemetry({ ...localData });
     } finally {
       setIsLoading(false);
     }
@@ -257,7 +279,9 @@ export default function KineticMeshCockpit() {
         setTelemetry(data);
       }
     } catch (err) {
-      console.error("Reset error:", err);
+      mockSwarmEngine.reset();
+      const localData = mockSwarmEngine.step(0.0);
+      setTelemetry({ ...localData });
     } finally {
       setIsLoading(false);
     }
